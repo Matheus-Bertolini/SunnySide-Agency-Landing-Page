@@ -1,0 +1,98 @@
+@import url('header.css');
+@import url('menu.css');
+@import url('main.css');
+@import url('footer.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* CORES PRIMÁRIAS */
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --Dark-blue: hsl(198, 62%, 26%);
+    --Light-blue: hsl(200, 100%, 80%);
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    --Light-moderate-cyan: hsl(167, 44%, 70%);
+    --Very-dark-moderate-cyan: hsl(166, 47%, 30%);
+
+    /* CORES NEUTRAS */
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);    
+
+    /* TIPOGRAFIA */
+    --barlow: 'Barlow', sans-serif;
+    --fraunces: 'Fraunces', sans-serif;
+
+    /* CONVERTER 10px EM 1rem */
+    font-size: 62.5%;
+}
+
+html, body{
+    background-color: var(--white);
+
+    width: 100%;
+    height: 100%;
+    
+    font-size: 1.8rem;
+    font-family: var(--barlow);
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    font-family: var(--fraunces);
+    font-weight: 900;
+}
+
+p{
+    line-height: 1.5;
+}
+
+img{
+    vertical-align: top;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.default-button{
+    color: var(--Very-dark-desaturated-blue);
+    border-radius: 5rem;
+
+    text-transform: uppercase;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: 1.6rem;
+
+    padding-block: 2rem;
+    padding-inline: 2.8rem;
+}
+
+.container{
+    width: min(50rem, 100%);
+
+    padding-inline: 3rem;
+    margin-inline: auto;
+
+    text-align: center;
+
+
+}
+
+@media screen and (min-width: 1024px){
+    .container{
+        width: 100%;
+    }
+}

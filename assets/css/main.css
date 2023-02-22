@@ -1,0 +1,204 @@
+.main{
+    width: 100%;
+}
+
+/* SECTION DESCRIPTION */
+.main__description-article{
+    display: grid;
+}
+
+.main__description-img{
+    width: 100%;
+}
+
+.main__description-content{
+    padding-block: 5rem;
+}
+
+.main__description-title{
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 3rem;
+}
+
+.main__description-text{
+    color: var(--Dark-grayish-blue);
+
+    margin-block: 2.8rem;
+}
+
+.main__description-link{
+    display: inline-block;
+
+    color: var(--Very-dark-desaturated-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin-top: 1rem;
+}
+
+.main__description-link::after{
+    content: '';
+    
+    display: block;
+    
+    width: 15rem;
+    height: 1rem;
+
+    margin-inline: auto;
+
+    background-color: var(--Yellow);
+    border-radius: 1rem;
+    opacity: .3;
+
+    transform: translateY(-.78rem);
+
+    transition: all .3s;
+
+    position: relative;
+    z-index: -1;
+}
+
+.main__description-link:hover::after{
+    opacity: 1;
+}
+
+.red-color::after{
+    background-color: var(--Soft-red);
+}
+
+/* SECTION RESOURCES */
+.main__resources{
+    display: grid;
+}
+
+.main__resources-article{
+    background: url('../../img/mobile/image-graphic-design.jpg') no-repeat center / cover;
+
+    color: var(--Dark-desaturated-cyan);
+
+    position: relative;
+
+    padding-top: 100%;
+    padding-bottom: 4.6rem;
+}
+
+.main__resources-title{
+    margin-bottom: 3rem;
+}
+
+.main__resources article:nth-child(2){
+    background: url('../../img/mobile/image-photography.jpg') no-repeat center / cover;
+
+    color: var(--Dark-blue);
+}
+
+/* SECTION TESTIMONIALS */
+.main__testimonials{
+    padding-block: 6rem;
+}
+
+.main__testimonials-title{
+    color: var(--Grayish-blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .3rem;
+}
+
+.main__testimonials-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+.main__testimonials-perfil{
+    border-radius: 50%;
+    
+    margin-block: 5rem;
+}
+
+.main__testimonials-commentary{
+    color: var(--Very-dark-desaturated-blue);
+
+    margin-bottom: 3rem;
+}
+
+.main__testimonials-name{
+    color: var(--Very-dark-desaturated-blue);
+
+    margin-bottom: 1.4rem;
+}
+
+.main__testimonials-work{
+    color: var(--Grayish-blue);
+    font-size: 1.6rem;
+}
+
+/* SECTION DECORATIVE */
+.main__decorative-lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main__decorative-img{
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+    /*SECTION DESCRIPTION*/
+    .main__description-article{
+        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'text img';
+    }
+
+    .main__right-img{
+        grid-area: img;
+    }
+
+    div.main__description-content{
+        align-self: center;
+        text-align: left;
+        width: min(50rem, 100%);
+    }
+
+    .main__description-title{
+        font-size: 3.8rem;
+    }
+
+    .main__description-link{
+        text-align: center;
+    }
+
+    /*SECTION RESOURCE*/
+    .main__resources{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main__resources-article{
+        padding-top: 70%;
+        background-image: url(../../img/desktop/image-graphic-design.jpg);
+    }
+
+    .main__resources article:nth-child(2){
+        background-image: url('../../img/desktop/image-photography.jpg');
+    }
+
+    div.main__resources-content{
+        width: min(45rem, 100%);
+    }
+
+/*SECTION TESTIMONIALS*/
+    div.main__testimonials-content{
+        width: min(110rem, 100%);
+
+        flex-direction: row;
+        column-gap: 6rem;
+    }
+
+    /*SECTION DECORATIVE*/
+    .main__decorative-lista{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
